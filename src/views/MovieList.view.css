@@ -1,0 +1,61 @@
+.movieListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.movieList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
+.movieList .card {
+    margin: 10px 15px;
+}
+
+.lip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+}
+
+.lip h1 {
+    margin-left: 45px;
+}
+
+.lip form {
+    margin-right: 10%;
+}
+
+.lip input {
+    height: 30px;
+    width: 300px;
+    margin-right: 15px;
+    font: var(--body);
+    border-radius: 30px;
+    border-style: none;
+    padding: 3px;
+    text-align: center;
+}
+
+.lip input:focus {
+    outline: none;
+}
+
+.lip button {
+    padding: 5px;
+}
+
+.lip .searchIcon {
+    color: white;
+    font: var(--header);
+}
+
+.lip .searchIcon:hover {
+    filter: opacity(0.5);
+}

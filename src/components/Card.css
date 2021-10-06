@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 200px;
+    padding: 10px 0px 25px 0px;
+    color: var(--quaternary-color);
+    background-color: rgba(0, 0, 0, 0.212);
+    border-radius: 4px;
+}
+
+.card:hover {
+    filter: brightness(1.1);
+    background-color: rgb(34, 34, 34);
+}
+
+.card h3 {
+    font: var(--accent);
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px 7px;
+}
+
+.card.rect > img {
+    height: 200px;
+    width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.384) 0px 19px 38px, rgba(0, 0, 0, 0.274) 0px 15px 12px;
+}

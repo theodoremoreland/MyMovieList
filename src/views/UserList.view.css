@@ -1,0 +1,14 @@
+.userListView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.userListView h4 {
+    margin-bottom: 15px;
+    font: var(--accent);
+    color: var(--quaternary-color);
+}

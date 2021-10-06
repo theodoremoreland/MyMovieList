@@ -1,0 +1,46 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #5e5368 74%);    
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.banner img {
+    height: 250px;
+    width: 250px;
+    margin: 0px 15px 0px 35px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.banner .inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner input {
+    background-color: #28313b00;
+    border-style: none;
+    margin: 5px 0px;
+    color: var(--quaternary-color);
+    font: var(--header);
+}
+
+.banner button {
+    width: min-content;
+    color: var(--quaternary-color);
+    text-decoration: none;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #00000093;
+    margin-top: 15px;
+    padding: 10px 20px;
+}
+
+.banner button:hover, .banner input:hover {
+    filter: brightness(1.2);
+}

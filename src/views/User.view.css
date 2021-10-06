@@ -1,0 +1,15 @@
+.userViewContainer ul, 
+.userViewContainer li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userViewContainer ul {
+    margin: 50px 0px;
+}
+
+.userViewContainer li {
+    margin: 10px 0px;
+}
