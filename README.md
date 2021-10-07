@@ -1,4 +1,7 @@
-# condescending_broholmer 
+# condescending_broholmer
+
+Deployment:
+https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
 
 Project:
 * Build a front-end web app that allows users to list, search, add, edit and delete movies using the libraries and frameworks of your choice.
