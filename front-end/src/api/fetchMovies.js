@@ -19,11 +19,7 @@ export const fetchMovies = async (searchTerm) => {
 
         return response.json();
       })
-      .then(response => {
-          const movies = response; 
-
-          return movies;
-      })
+      .then(movies => movies)
       .catch(error => {
         console.error(error);
 
