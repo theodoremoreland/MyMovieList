@@ -1,20 +1,23 @@
-# condescending_broholmer
-
-Deployment:
-https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
-
-Project:
-* Build a front-end web app that allows users to list, search, add, edit and delete movies using the libraries and frameworks of your choice.
-* Pre-populate the app with the below linked CSV of movie data. This does not need to be stored in a database or API, but we'll leave it up to you to decide how to set up the data.
-* Add tests
-* Host this site somewhere accessible by our team
-* Additional functionality that you would like to demonstrate
-
-# MyMovieList (actual name pending)
+# MyMovieList
 
 What does your taste in movies say about you? No, this isn't a BuzzFeed article or an online quiz. 
 MyMovieList is a platform for creating your own Movie Profile. Your profile can be used to express your exquisite taste
 and find other people of a similarly refined palate.
+
+Deployment:
+https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
+
+### Technologies used
+- React.js
+- JavaScript (ES6)
+- HTML
+- CSS
+- Python
+- Pandas
+- PostgreSQL
+- AWS RDS
+- AWS Lambda
+- AWS Amplify
 
 ### Features
 - Create a user profile
@@ -60,4 +63,3 @@ Storage
     Loads random subset of movies for list
  - LocalStorage
     Loads a default / fake profile before implementing localStorage version# MyMovieList
--
