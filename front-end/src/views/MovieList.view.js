@@ -9,10 +9,10 @@ import Card from '../components/Card';
 
 // API
 import { fetchMovies } from '../api/fetchMovies';
+import { fetchMoviePoster } from '../api/fetchMoviePoster';
 
 // Icons
 import { CgSearch } from "react-icons/cg";
-import { fetchMoviePoster } from '../api/fetchMoviePoster';
 
 export default function MovieListView() {
     const [movies, setMovies] = useState([]);
