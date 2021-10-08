@@ -1,5 +1,7 @@
 import './Card.css';
 
+import loadingAnimation from "../images/loading-animation.gif";
+
 export default function Card({ title, pic, shape = "rect", onClick }) {
     return (
         <div
@@ -7,7 +9,7 @@ export default function Card({ title, pic, shape = "rect", onClick }) {
             onClick={e => onClick(e)}
         >
             <img
-                src={pic ? pic: "https://cdn.dribbble.com/users/295241/screenshots/4496315/loading-animation.gif"}
+                src={pic ? pic: loadingAnimation}
                 alt="Movie poster"
             />
             <h3>{title}</h3>

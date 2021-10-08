@@ -1,3 +1,5 @@
+import placeholderPoster from "../images/placeholder-movie-poster.jpg"
+
 const apiKey = process.env.REACT_APP_OMDB_API_KEY;
 
 /**
@@ -21,7 +23,7 @@ export const fetchMoviePoster = async (title, year) => {
         .catch(e => {
             console.log(e);
 
-            return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT860uK98ssmdtdQ986wYE2uUo4OJvJKGPDQwWABx7_W7WTHbBDoZms4AV7y-AXLF9DNRA&usqp=CAU";
+            return placeholderPoster;
         });
 
     return posterURLUponResolve;
