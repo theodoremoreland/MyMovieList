@@ -9,7 +9,7 @@ const apiKey = process.env.REACT_APP_OMDB_API_KEY;
  * @param {String} year - Year movie released for movie to retreive poster for.
  */
 export const fetchMoviePoster = async (title, year) => {
-    const posterURLUponResolve = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${title}&y=${year}`)
+    const posterURLUponResolve = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${title}&y=${year}`)
         .then(res => res.json())
         .then((data) => {
             const poster = data.Poster;
