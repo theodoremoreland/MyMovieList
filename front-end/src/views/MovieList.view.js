@@ -1,5 +1,5 @@
 // React
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 // Styles
 import './MovieList.view.css';
@@ -16,6 +16,7 @@ import { CgSearch } from "react-icons/cg";
 export default function MovieListView() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const inputRef = useRef();
 
     const updateMovies = async (event) => {
         event.preventDefault();
@@ -29,7 +30,10 @@ export default function MovieListView() {
 
     useEffect(() => {
         fetchMovies()
-            .then(movies => setMovies(movies))
+            .then((movies) => {
+                setMovies(movies);
+                inputRef.current.focus();
+            })
             .catch(e => console.error(e));
     }, []);
 
@@ -42,6 +46,7 @@ export default function MovieListView() {
                         type="text"
                         placeholder="Movie title"
                         value={searchTerm}
+                        ref={inputRef}
                         onChange={event => setSearchTerm(event.target.value)}
                         onKeyDown={event => {
                             if (event.key === "Enter") updateMovies(event);
