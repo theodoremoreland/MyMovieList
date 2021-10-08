@@ -21,7 +21,7 @@ export const fetchMoviePoster = async (title, year) => {
             return poster;
         })
         .catch(e => {
-            console.log(e);
+            // console.log(e);
 
             return placeholderPoster;
         });
