@@ -1,13 +1,15 @@
 import './Card.css';
 
-export default function Card({ title, shape = "rect", onClick, pic }) {
-
+export default function Card({ title, pic, shape = "rect", onClick }) {
     return (
         <div
             className={`card ${shape}`}
             onClick={e => onClick(e)}
         >
-            <img src={pic ? pic: "https://www.themoviedb.org/t/p/original/9fewYMd61WydJoqmV2HHP5IpuBe.jpg"} alt="demo" />
+            <img
+                src={pic ? pic: "https://cdn.dribbble.com/users/295241/screenshots/4496315/loading-animation.gif"}
+                alt="Movie poster"
+            />
             <h3>{title}</h3>
         </div>
     );

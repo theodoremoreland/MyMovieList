@@ -12,6 +12,7 @@ import { fetchMovies } from '../api/fetchMovies';
 
 // Icons
 import { CgSearch } from "react-icons/cg";
+import { fetchMoviePoster } from '../api/fetchMoviePoster';
 
 export default function MovieListView() {
     const [movies, setMovies] = useState([]);
@@ -37,6 +38,32 @@ export default function MovieListView() {
             .catch(e => console.error(e));
     }, []);
 
+    useEffect(() => {
+        // Needed to avoid undefined error.
+        if (movies[0] !== undefined) {
+            // Checks to see if current array of movies have a .poster property.
+            const hasAlreadyFetchedPosters = movies[0].poster;
+
+            // Essentially assigns .poster property to movies array.
+            // Checks to see if property exists already before running as to avoind infinite loop.
+            if (!hasAlreadyFetchedPosters) {
+                // Fetches all posters at once, but only resolves when all fetches are complete.
+                Promise.all(
+                        [...movies].map(movie => fetchMoviePoster(movie.title, movie.year))
+                    )
+                    .then(posters => {
+                        const moviesWithPosters = [...movies].map((movie, index) => {
+                            return { ...movie, "poster": posters[index] };
+                        })
+
+                        setMovies(moviesWithPosters);
+                    })
+                    .catch(e => console.log(e))
+                ;
+            }
+        }
+    }, [movies]);
+
     return (
         <div className="movieListContainer">
             <div className="lip">
@@ -60,7 +87,15 @@ export default function MovieListView() {
             </div>
             <ul className="movieList">
                 {
-                    movies.map(movie => <Card key={`${movie.title} (${movie.year})}`} title={`${movie.title} (${movie.year})`} />)
+                    movies.map((movie) => {
+                        return (
+                            <Card
+                                key={`${movie.title} (${movie.year}) - ${movie.origin}}`}
+                                title={`${movie.title} (${movie.year})`}
+                                pic={movie.poster} 
+                            />
+                        )
+                    })
                 }
             </ul>
         </div>
