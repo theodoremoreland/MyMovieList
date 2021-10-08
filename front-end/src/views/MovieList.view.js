@@ -7,15 +7,25 @@ import './MovieList.view.css';
 // Components
 import Card from '../components/Card';
 
-// api
+// API
 import { fetchMovies } from '../api/fetchMovies';
 
-// icons
+// Icons
 import { CgSearch } from "react-icons/cg";
 
 export default function MovieListView() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+
+    const updateMovies = async (event) => {
+        event.preventDefault();
+
+        const movies = await fetchMovies(searchTerm)
+            .then(movies => movies)
+            .catch(e => console.error(e));
+        
+        setMovies(movies);
+    }
 
     useEffect(() => {
         fetchMovies()
@@ -31,20 +41,15 @@ export default function MovieListView() {
                     <input
                         type="text"
                         placeholder="Movie title"
-                        onChange={event => setSearchTerm(event.target.value)}
                         value={searchTerm}
+                        onChange={event => setSearchTerm(event.target.value)}
+                        onKeyDown={event => {
+                            if (event.key === "Enter") updateMovies(event);
+                        }}
                     />
                     <CgSearch
                         className="searchIcon"
-                        onClick={async (event) => {
-                            event.preventDefault();
-
-                            const movies = await fetchMovies(searchTerm)
-                                .then(movies => movies)
-                                .catch(e => console.error(e));
-                            
-                            setMovies(movies);
-                            }}
+                        onClick={(event) => updateMovies(event)}
                     />
                 </form>
             </div>
