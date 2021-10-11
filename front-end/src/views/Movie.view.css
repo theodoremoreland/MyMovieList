@@ -1,0 +1,18 @@
+.movieViewContainer ul, .movieViewContainer li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieViewContainer ul {
+    margin: 50px 0px;
+}
+
+.movieViewContainer li {
+    margin: 10px 0px;
+}
+
+.movieViewContainer li p {
+    color: white;
+}
