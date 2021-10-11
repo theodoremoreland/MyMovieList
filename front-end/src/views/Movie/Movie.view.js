@@ -1,11 +1,32 @@
+// React
+import { useContext, useEffect } from 'react';
+
 // Components
 import Banner from '../../components/Banner/Banner';
 
 // Styles
 import './Movie.view.css';
 
+// Context
+import { MoviesContext } from '../../contexts/MoviesContext';
+
 export default function MovieView({ location }) {
-    const { title, year, poster, director, origin, wiki_page, crew, genre } = location.state;
+    const { selectedMovie, setSelectedMovie } = useContext(MoviesContext);
+    const { 
+        title,
+        year,
+        poster,
+        director,
+        origin,
+        wiki_page,
+        crew,
+        genre } = selectedMovie;
+
+    useEffect(() => {
+        if (location.state) {
+            setSelectedMovie(location.state);
+        }
+    }, []);
 
     return (
         <div className="movieViewContainer">

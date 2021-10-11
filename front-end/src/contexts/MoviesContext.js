@@ -9,6 +9,7 @@ export const MoviesContext = createContext();
 
 export default function MoviesProvider({children}) {
     const [movies, setMovies] = useState([]);
+    const [selectedMovie, setSelectedMovie] = useState();
 
     useEffect(() => {
         fetchMovies()
@@ -38,6 +39,7 @@ export default function MoviesProvider({children}) {
                         })
 
                         setMovies(moviesWithPosters);
+                        setSelectedMovie(moviesWithPosters[0]);
                     })
                     .catch(e => console.log(e))
                 ;
@@ -46,7 +48,7 @@ export default function MoviesProvider({children}) {
     }, [movies]);
 
     return (
-        <MoviesContext.Provider value={{movies, setMovies}}>
+        <MoviesContext.Provider value={{ movies, setMovies, selectedMovie, setSelectedMovie }}>
             {children}
         </MoviesContext.Provider>
     )
