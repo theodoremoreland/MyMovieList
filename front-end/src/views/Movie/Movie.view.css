@@ -32,11 +32,12 @@
     border-radius: 4px;
     background-color: #00000093;
     margin: 15px 15px;
-    padding: 10px 20px;
+    padding: 10px 40px;
+    border-radius: 70px;
 }
 
 .movieViewContainer  > .buttonGroup button:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.5);
 }
 
 .movieViewContainer li {
