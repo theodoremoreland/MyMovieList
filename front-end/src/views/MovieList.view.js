@@ -66,6 +66,7 @@ export default function MovieListView() {
                     movies.map((movie) => {
                         return (
                             <NavLink
+                                className="navLink"
                                 key={`${movie.title} (${movie.year}) - ${movie.origin}}`}
                                 to={{
                                     pathname: "/movie",

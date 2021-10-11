@@ -11,6 +11,10 @@
     margin-left: 25px;
 }
 
+.movieList .navLink {
+    text-decoration: none;
+}
+
 .movieList .card {
     margin: 10px 15px;
 }

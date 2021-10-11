@@ -1,3 +1,10 @@
+.movieViewContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .movieViewContainer ul, .movieViewContainer li {
     display: flex;
     flex-direction: column;
@@ -5,8 +12,27 @@
     align-items: center;
 }
 
-.movieViewContainer ul {
-    margin: 50px 0px;
+.movieViewContainer  > .buttonGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieViewContainer  > .buttonGroup button {
+    width: min-content;
+    color: var(--quaternary-color);
+    text-decoration: none;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #00000093;
+    margin: 15px 15px;
+    padding: 10px 20px;
+}
+
+.movieViewContainer  > .buttonGroup button:hover {
+    filter: brightness(1.2);
 }
 
 .movieViewContainer li {
@@ -15,4 +41,16 @@
 
 .movieViewContainer li p {
     color: white;
+}
+
+#wiki {
+    margin: 15px 0px;
+    font-size: 1.7rem;
+    color: rgb(250, 230, 255);
+    text-decoration: none;
+}
+
+#wiki:hover {
+    filter: opacity(0.7);
+    scale: 1.01;
 }

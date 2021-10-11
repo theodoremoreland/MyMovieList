@@ -10,13 +10,33 @@ export default function MovieView({ location }) {
     return (
         <div className="movieViewContainer">
             <Banner
-                title={title}
+                title={`${title} (${year})`}
                 pic={poster}
-                subtitle={year}
-                handleSubtitleChange={() => {}}
-                handleTitleChange={() => {}}
-                update={() => {}}
+                subtitle={""}
+                isMutable={false}
             />
+            <div className="buttonGroup">
+                <button id="favorites">
+                    Add to favorites
+                </button>
+                <button id="watchlist">
+                    Add to watchlist
+                </button>
+                <button id="completed">
+                    Add to completed
+                </button>
+                <button id="dropped">
+                    Add to dropped
+                </button>
+            </div>
+            <a
+                href={wiki_page}
+                target="_blank"
+                rel="noreferrer"
+                id="wiki"
+            >
+                <p>-- Wiki --</p>
+            </a>
             <ul>
                 <li>
                     <h3>Cast</h3>
@@ -35,13 +55,6 @@ export default function MovieView({ location }) {
                     <p>{genre}</p>
                 </li>
             </ul>
-            <a
-                href={wiki_page}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <h3>Wiki</h3>
-            </a>
         </div>
     );
 }

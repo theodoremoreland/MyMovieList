@@ -66,6 +66,7 @@ export default function UserView() {
                 title={username}
                 pic={pic}
                 subtitle={location}
+                isMutable={true}
                 handleSubtitleChange={handleSubtitleChange}
                 handleTitleChange={handleTitleChange}
                 update={update}
