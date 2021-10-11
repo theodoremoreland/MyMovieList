@@ -1,10 +1,10 @@
 // Styles
 import './Banner.css';
 
-export default function Banner({ title, pic, subtitle, isMutable, handleTitleChange, handleSubtitleChange, update }) {
+export default function Banner({ title, pic, imgType, subtitle, isMutable, handleTitleChange, handleSubtitleChange, update }) {
   return (
     <div className="banner">
-        <img id="bannerImage" src={pic} alt={title} />
+        <img id="bannerImage" className={`${imgType}`} src={pic} alt={title} />
         <div className="inputContainer">
             {
                 isMutable

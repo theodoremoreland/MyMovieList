@@ -12,6 +12,7 @@ export default function MovieView({ location }) {
             <Banner
                 title={`${title} (${year})`}
                 pic={poster}
+                imgType="poster"
                 subtitle={""}
                 isMutable={false}
             />

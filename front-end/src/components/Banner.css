@@ -17,6 +17,15 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+.banner img.poster {
+    height: 300px;
+    width: 225px;
+}
+
+.banner img.avatar {
+    border-radius: 500px;
+}
+
 .banner .inputContainer {
     display: flex;
     flex-direction: column;

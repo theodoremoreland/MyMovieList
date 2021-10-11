@@ -65,6 +65,7 @@ export default function UserView() {
             <Banner
                 title={username}
                 pic={pic}
+                imgType="avatar"
                 subtitle={location}
                 isMutable={true}
                 handleSubtitleChange={handleSubtitleChange}
