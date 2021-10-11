@@ -1,6 +1,6 @@
 import './Card.css';
 
-import loadingAnimation from "../images/loading-animation.gif";
+import loadingAnimation from "../../images/loading-animation.gif";
 
 export default function Card({ title, pic, shape = "rect" }) {
     return (

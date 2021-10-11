@@ -1,5 +1,5 @@
 // Components
-import Banner from '../components/Banner';
+import Banner from '../../components/Banner/Banner';
 
 // Styles
 import './Movie.view.css';

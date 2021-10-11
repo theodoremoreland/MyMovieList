@@ -10,13 +10,13 @@ import { NavLink } from 'react-router-dom';
 import './MovieList.view.css';
 
 // Context
-import { MoviesContext } from '../contexts/MoviesContext';
+import { MoviesContext } from '../../contexts/MoviesContext';
 
 // Components
-import Card from '../components/Card';
+import Card from '../../components/Card/Card';
 
 // API
-import { fetchMovies } from '../api/fetchMovies';
+import { fetchMovies } from '../../api/fetchMovies';
 
 // Icons
 import { CgSearch } from "react-icons/cg";

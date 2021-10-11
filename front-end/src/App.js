@@ -15,13 +15,13 @@ import './App.css';
 import MoviesProvider from "./contexts/MoviesContext";
 
 // Views
-import MovieListView from './views/MovieList.view';
-import MovieView from './views/Movie.view';
-import UserListView from './views/UserList.view';
-import UserView from './views/User.view';
+import MovieListView from './views/MovieList/MovieList.view';
+import MovieView from './views/Movie/Movie.view';
+import UserListView from './views/UserList/UserList.view';
+import UserView from './views/User/User.view';
 
 // Components
-import Menu from './components/Menu';
+import Menu from './components/Menu/Menu';
 
 export default function App() {
     return (

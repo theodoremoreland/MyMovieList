@@ -8,7 +8,7 @@ import './UserList.view.css';
 import { init } from './UserList.controller';
 
 // Components
-import Card from '../components/Card';
+import Card from '../../components/Card/Card';
 
 export default function UserListView() {
     const [username, setUsername] = useState("");

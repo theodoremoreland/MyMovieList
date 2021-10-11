@@ -11,7 +11,7 @@ import {
 import './User.view.css';
 
 // Components
-import Banner from '../components/Banner';
+import Banner from '../../components/Banner/Banner';
 
 export default function UserView() {
     const [username, setUsername] = useState("");
