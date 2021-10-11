@@ -35,7 +35,7 @@ export default function UserView() {
     }
 
     const update = () => {
-        updateProfile({ username, pic, location, watchlist, completed, dropped, favorites });
+        updateProfile({ username, pic, location });
     }
 
     useEffect(() => {
@@ -44,20 +44,17 @@ export default function UserView() {
         const {
             username,
             pic,
-            location,
-            watchlist,
-            completed,
-            dropped,
-            favorites
+            location
         } = JSON.parse(localStorage.getItem("profile"));
 
         setUsername(username);
         setPic(pic);
         setLocation(location);
-        setWatchList(watchlist);
-        setCompleted(completed);
-        setDropped(dropped);
-        setFavories(favorites);
+
+        setWatchList(JSON.parse(localStorage.getItem("watchlist")) || []);
+        setCompleted(JSON.parse(localStorage.getItem("completed")) || []);
+        setDropped(JSON.parse(localStorage.getItem("dropped")) || []);
+        setFavories(JSON.parse(localStorage.getItem("favorites")) || []);
     }, []);
 
     return (
@@ -77,7 +74,7 @@ export default function UserView() {
                     <h3>Favorites</h3>
                     <ul>
                         {
-                            favorites.map(e => <li>{e}</li>)
+                            favorites.map(e => <li className="movieItem" key={`favorite: ${e}`}>{e}</li>)
                         }
                     </ul>
                 </li>
@@ -85,7 +82,7 @@ export default function UserView() {
                     <h3>Watchlist</h3>
                     <ul>
                         {
-                            watchlist.map(e => <li>{e}</li>)
+                            watchlist.map(e => <li className="movieItem" key={`watchlist: ${e}`}>{e}</li>)
                         }
                     </ul>
                 </li>
@@ -93,7 +90,7 @@ export default function UserView() {
                     <h3>Completed</h3>
                     <ul>
                         {
-                            completed.map(e => <li>{e}</li>)
+                            completed.map(e => <li className="movieItem" key={`completed: ${e}`}>{e}</li>)
                         }
                     </ul>
                 </li>
@@ -101,7 +98,7 @@ export default function UserView() {
                     <h3>Dropped</h3>
                     <ul>
                         {
-                            dropped.map(e => <li>{e}</li>)
+                            dropped.map(e => <li className="movieItem" key={`dropped: ${e}`}>{e}</li>)
                         }
                     </ul>
                 </li>

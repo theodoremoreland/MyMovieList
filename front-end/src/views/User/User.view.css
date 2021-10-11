@@ -1,15 +1,24 @@
-.userViewContainer ul, 
+.userViewContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px;
+}
+
 .userViewContainer li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.userViewContainer ul {
-    margin: 50px 0px;
+.userViewContainer h3 {
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
 
-.userViewContainer li {
-    margin: 10px 0px;
+.userViewContainer .movieItem {
+    margin: 2px 0px;
+    color: aliceblue;
 }

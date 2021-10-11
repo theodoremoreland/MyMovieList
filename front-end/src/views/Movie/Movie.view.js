@@ -10,6 +10,9 @@ import './Movie.view.css';
 // Context
 import { MoviesContext } from '../../contexts/MoviesContext';
 
+// Controller
+import { addToLocalStorage } from './Movie.controller';
+
 export default function MovieView({ location }) {
     const { selectedMovie, setSelectedMovie } = useContext(MoviesContext);
     const { 
@@ -22,10 +25,17 @@ export default function MovieView({ location }) {
         crew,
         genre } = selectedMovie;
 
+    const handleAddToList = (event, listName) => {
+        event.stopPropagation();
+
+        addToLocalStorage(listName, title);
+    }
+
     useEffect(() => {
         if (location.state) {
             setSelectedMovie(location.state);
         }
+    // eslint-disable-next-line
     }, []);
 
     return (
@@ -38,16 +48,16 @@ export default function MovieView({ location }) {
                 isMutable={false}
             />
             <div className="buttonGroup">
-                <button id="favorites">
+                <button id="favorites" onClick={(event) =>  handleAddToList(event, "favorites")}>
                     Add to favorites
                 </button>
-                <button id="watchlist">
+                <button id="watchlist" onClick={(event) =>  handleAddToList(event, "watchlist")}>
                     Add to watchlist
                 </button>
-                <button id="completed">
+                <button id="completed" onClick={(event) =>  handleAddToList(event, "completed")}>
                     Add to completed
                 </button>
-                <button id="dropped">
+                <button id="dropped" onClick={(event) =>  handleAddToList(event, "dropped")}> 
                     Add to dropped
                 </button>
             </div>
