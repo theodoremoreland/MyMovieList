@@ -11,6 +11,9 @@ import {
 import './reset.css';
 import './App.css';
 
+// Context
+import MoviesProvider from "./contexts/MoviesContext";
+
 // Views
 import MovieListView from './views/MovieList.view';
 import MovieView from './views/Movie.view';
@@ -27,11 +30,13 @@ export default function App() {
                 <Menu />
                 <div className="content">     
                     <Switch>
-                        <Route path="/movie" component={MovieView} />
-                        <Route path="/movie-list" component={MovieListView} />
-                        <Route path="/user" component={UserView} />
-                        <Route path="/user-list" component={UserListView} />
-                        <Redirect from='/' to="/movie-list" />
+                        <MoviesProvider>
+                            <Route path="/movie" component={MovieView} />
+                            <Route path="/movie-list" component={MovieListView} />
+                            <Route path="/user" component={UserView} />
+                            <Route path="/user-list" component={UserListView} />
+                            <Redirect from='/' to="/movie-list" />
+                        </MoviesProvider>
                     </Switch>
                 </div>          
             </HashRouter>
