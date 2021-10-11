@@ -1,18 +1,31 @@
 // Styles
 import './Banner.css';
 
-export default function Banner({ title, pic, subtitle, handleTitleChange, handleSubtitleChange, update }) {
+export default function Banner({ title, pic, subtitle, isMutable, handleTitleChange, handleSubtitleChange, update }) {
   return (
     <div className="banner">
         <img id="bannerImage" src={pic} alt={title} />
         <div className="inputContainer">
-            <input id="title" value={title} onChange={e => handleTitleChange(e)} />
-            <input id="subtitle" value={subtitle} onChange={e => handleSubtitleChange(e)} />
-            <button
-                onClick={() => update()}
-            >
-                Update
-            </button>
+            {
+                isMutable
+                    ?   <>
+                            <input id="title" value={title} onChange={e => handleTitleChange(e)} />
+                            <input id="subtitle" value={subtitle} onChange={e => handleSubtitleChange(e)} />
+                            <button
+                                onClick={() => update()}
+                            >
+                                Update
+                            </button>
+                        </>
+                    :   <>
+                            <h1 id="title">
+                                {title}
+                            </h1>
+                            <p id="subtitle">
+                                {subtitle}
+                            </p>
+                        </>
+            }
         </div>
     </div>
   );
