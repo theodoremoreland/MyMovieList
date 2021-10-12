@@ -1,19 +1,19 @@
 .movieViewContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .movieViewContainer > ul {
-    margin-bottom: 25px;
+    margin: 0px 0px 25px 60px;
 }
 
 .movieViewContainer ul, .movieViewContainer li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .movieViewContainer  > .buttonGroup {
@@ -22,6 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0px 0px 0px 30px;
 }
 
 .movieViewContainer  > .buttonGroup button {
@@ -49,13 +50,13 @@
 }
 
 .movieViewContainer li p {
-    padding: 0px 35px;
+    padding: 0px 0px;
     font-size: 1.2rem;
     color: white;
 }
 
 #wiki {
-    margin: 15px 0px;
+    margin: 15px 0px 15px 60px;
     font-size: 1.7rem;
     color: rgb(70, 119, 255);
     text-decoration: none;
