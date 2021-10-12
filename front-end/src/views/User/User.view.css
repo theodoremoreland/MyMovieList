@@ -1,21 +1,29 @@
+.userViewContainer > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0px 20px 60px;
+}
+
 .userViewContainer ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    margin: 20px 0px;
+    align-items: flex-start;
 }
 
 .userViewContainer li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    padding: 10px 0px;
+    font: var(--body);
 }
 
 .userViewContainer h3 {
-    font-size: 1.5rem;
-    text-decoration: underline;
+    font: var(--header);
 }
 
 .userViewContainer .movieItem {
