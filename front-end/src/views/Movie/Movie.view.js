@@ -29,6 +29,7 @@ export default function MovieView({ location }) {
         event.stopPropagation();
 
         addToLocalStorage(listName, title);
+        alert(`Added ${title} to ${listName}.`);
     }
 
     useEffect(() => {
