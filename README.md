@@ -4,7 +4,7 @@ What does your taste in movies say about you? No, this isn't a BuzzFeed article 
 MyMovieList is a platform for creating your own Movie Profile. Your profile can be used to express your exquisite taste
 and find other people of a similarly refined palate.
 
-Deployment:
+### Deployment
 https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
 
 ### Technologies used
@@ -20,47 +20,44 @@ https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
 - AWS Amplify
 
 ### Features
-- Create a user profile
-    - Username
-    - Profile Pic
-    - Location
-    - Watchlist
-    - Completed
-    - Dropped
-    - Favorites
-- Browse Movies
-- Search Movies
-- Filter Movies
-- Add Movies to list (watchlist, completed, dropped, favorites)
-- People search
-    - Near you
-    - Like Minded
-    - Organizations
+- Browse 30k+ movies
+- Search for movies, database returns up to 30 similar matches
+- App attempts to assign posters for each movie via third party API
+- View data and wiki for each movie
+- Add movies to watchlist, favorites, completed, and dropped categories for user profile
+- Remove movies from profile categories
+- Update name and location of profile
 
-### Inspiration(s)
-- https://myanimelist.net
-- https://open.spotify.com
+### Future improvements
+- Add testing suites
+- Update banners so they change color based on poster and profile pic
+- Add database for mock users
 
-- Views
-    - Users List // Card, Pills, Page Lip
-    - Movies List // Card, Pills, Page Lip
-        randomized by default
-        search bar
-        filter pills (watchlist, completed, dropped, favorites)
-    - Movie // Banner, Page Lip
-        Release Year
-        Title
-        Origin/Ethnicity
-        Director
-        Cast
-        Genre
-        Wiki Page
-        Plot
-    - User // Banner, Page Lip
+# Screenshots
 
-Storage
-- RDS
-    Loads random subset of movies for list
- - LocalStorage
-    Loads a default / fake profile before implementing localStorage version# MyMovieList
--
+# Landing page / Movie List view
+<img src="presentation/1.PNG" width="700">
+
+# After clicking on a movie
+<img src="presentation/2.PNG" width="700">
+
+# Adding movie to watchlist
+<img src="presentation/3.PNG" width="700">
+
+# Landing page / Movie List view (after searching for "Spider")
+<img src="presentation/7.PNG" width="700">
+
+# Spider Man 2 page
+<img src="presentation/8.PNG" width="700">
+
+# Adding Spider Man 2 to favorites
+<img src="presentation/9.PNG" width="700">
+
+# Visiting user profile
+<img src="presentation/4.PNG" width="700">
+
+# Updating profile (name and location)
+<img src="presentation/5.PNG" width="700">
+
+# Users page (user database is a future improvement)
+<img src="presentation/6.PNG" width="700">
