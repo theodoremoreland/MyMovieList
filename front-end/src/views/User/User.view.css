@@ -13,7 +13,7 @@
     align-items: flex-start;
 }
 
-.userViewContainer li {
+.userViewContainer > ul > li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

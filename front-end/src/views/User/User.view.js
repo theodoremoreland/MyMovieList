@@ -12,6 +12,7 @@ import './User.view.css';
 
 // Components
 import Banner from '../../components/Banner/Banner';
+import Item from '../../components/Item/Item';
 
 export default function UserView() {
     const [username, setUsername] = useState("");
@@ -74,7 +75,7 @@ export default function UserView() {
                     <h3>Favorites</h3>
                     <ul>
                         {
-                            favorites.map(e => <li className="movieItem" key={`favorite: ${e}`}>{e}</li>)
+                            favorites.map(e => <Item className="movieItem" key={`favorite: ${e}`} text={e} />)
                         }
                     </ul>
                 </li>
@@ -82,7 +83,7 @@ export default function UserView() {
                     <h3>Watchlist</h3>
                     <ul>
                         {
-                            watchlist.map(e => <li className="movieItem" key={`watchlist: ${e}`}>{e}</li>)
+                            watchlist.map(e => <Item key={`watchlist: ${e}`} text={e} />)
                         }
                     </ul>
                 </li>
@@ -90,7 +91,7 @@ export default function UserView() {
                     <h3>Completed</h3>
                     <ul>
                         {
-                            completed.map(e => <li className="movieItem" key={`completed: ${e}`}>{e}</li>)
+                            completed.map(e => <Item key={`completed: ${e}`} text={e} />)
                         }
                     </ul>
                 </li>
@@ -98,7 +99,7 @@ export default function UserView() {
                     <h3>Dropped</h3>
                     <ul>
                         {
-                            dropped.map(e => <li className="movieItem" key={`dropped: ${e}`}>{e}</li>)
+                            dropped.map(e => <Item key={`dropped: ${e}`} text={e} />)
                         }
                     </ul>
                 </li>
