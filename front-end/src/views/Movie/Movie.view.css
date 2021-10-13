@@ -40,6 +40,11 @@
 
 .movieViewContainer  > .buttonGroup button:hover {
     filter: brightness(1.5);
+    scale: 1.02;
+}
+
+.movieViewContainer  > .buttonGroup button:active {
+    filter: opacity(0.6);
 }
 
 .movieViewContainer li {
