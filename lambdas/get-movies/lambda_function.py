@@ -52,7 +52,11 @@ def lambda_handler(event, context):
                     crew,
                     wiki_page
                 FROM no_plots
-                ORDER BY "year" DESC
+                WHERE
+                    random() < 0.01
+                    AND origin = 'American'
+                ORDER BY
+                    "year" DESC
                 LIMIT 30
                 ;	
                 """)
