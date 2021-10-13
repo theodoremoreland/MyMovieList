@@ -21,7 +21,7 @@ export default function UserView() {
     const [watchlist, setWatchList] = useState([]);
     const [completed, setCompleted] = useState([]);
     const [dropped, setDropped] = useState([]);
-    const [favorites, setFavories] = useState([]);
+    const [favorites, setFavorites] = useState([]);
 
     const handleTitleChange = (e) => {
         const value = e.target.value;
@@ -37,6 +37,20 @@ export default function UserView() {
 
     const update = () => {
         updateProfile({ username, pic, location });
+    }
+
+    const removeMovieFromList = (e, listName, text) => {
+        const storageKeys = {
+            "favorites": setFavorites,
+            "watchlist": setWatchList,
+            "completed": setCompleted,
+            "dropped": setDropped
+        };
+        const list = JSON.parse(localStorage.getItem(listName));
+        const updatedList = list.filter(title => title !== text);
+
+        storageKeys[listName](updatedList);
+        localStorage.setItem(listName, JSON.stringify(updatedList));
     }
 
     useEffect(() => {
@@ -55,7 +69,7 @@ export default function UserView() {
         setWatchList(JSON.parse(localStorage.getItem("watchlist")) || []);
         setCompleted(JSON.parse(localStorage.getItem("completed")) || []);
         setDropped(JSON.parse(localStorage.getItem("dropped")) || []);
-        setFavories(JSON.parse(localStorage.getItem("favorites")) || []);
+        setFavorites(JSON.parse(localStorage.getItem("favorites")) || []);
     }, []);
 
     return (
@@ -75,7 +89,14 @@ export default function UserView() {
                     <h3>Favorites</h3>
                     <ul>
                         {
-                            favorites.map(e => <Item className="movieItem" key={`favorite: ${e}`} text={e} />)
+                            favorites.map(e => 
+                                <Item
+                                    key={`favorite: ${e}`}
+                                    text={e}
+                                    listName="favorites"
+                                    deleteCallback={removeMovieFromList} 
+                                />
+                            )
                         }
                     </ul>
                 </li>
@@ -83,7 +104,14 @@ export default function UserView() {
                     <h3>Watchlist</h3>
                     <ul>
                         {
-                            watchlist.map(e => <Item key={`watchlist: ${e}`} text={e} />)
+                            watchlist.map(e => 
+                                <Item
+                                    key={`watchlist: ${e}`}
+                                    text={e}
+                                    listName="watchlist"
+                                    deleteCallback={removeMovieFromList}
+                                />
+                            )
                         }
                     </ul>
                 </li>
@@ -91,7 +119,14 @@ export default function UserView() {
                     <h3>Completed</h3>
                     <ul>
                         {
-                            completed.map(e => <Item key={`completed: ${e}`} text={e} />)
+                            completed.map(e =>
+                                <Item
+                                    key={`completed: ${e}`}
+                                    text={e}
+                                    listName="completed"
+                                    deleteCallback={removeMovieFromList} 
+                                />
+                            )
                         }
                     </ul>
                 </li>
@@ -99,7 +134,14 @@ export default function UserView() {
                     <h3>Dropped</h3>
                     <ul>
                         {
-                            dropped.map(e => <Item key={`dropped: ${e}`} text={e} />)
+                            dropped.map(e =>
+                                <Item
+                                    key={`dropped: ${e}`}
+                                    text={e}
+                                    listName="dropped"
+                                    deleteCallback={removeMovieFromList}
+                                />
+                            )
                         }
                     </ul>
                 </li>
