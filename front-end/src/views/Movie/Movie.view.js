@@ -13,7 +13,7 @@ import { MoviesContext } from '../../contexts/MoviesContext';
 // Controller
 import { addToLocalStorage } from './Movie.controller';
 
-export default function MovieView({ location }) {
+export default function MovieView({ location, navigation }) {
     const { selectedMovie, setSelectedMovie } = useContext(MoviesContext);
     const { 
         title,
@@ -23,7 +23,7 @@ export default function MovieView({ location }) {
         origin,
         wiki_page,
         crew,
-        genre } = selectedMovie;
+        genre } = selectedMovie ? selectedMovie : {};
 
     const handleAddToList = (event, listName) => {
         event.stopPropagation();
