@@ -1,5 +1,5 @@
 // React
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 // Styles
 import './UserList.view.css';
@@ -13,9 +13,10 @@ import Card from '../../components/Card/Card';
 export default function UserListView() {
     const [username, setUsername] = useState("");
     const [pic, setPic] = useState("");
+    const containerRef = useRef();
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to top of page.
+        containerRef.current.scrollTo(0, 0); // Scroll to top of page.
         init();
 
         const {
@@ -28,7 +29,7 @@ export default function UserListView() {
     }, []);
 
     return (
-    <div className="userListView">
+    <div className="userListView" ref={containerRef}>
         <h4>Just you</h4>
         <Card title={username} pic={pic} shape="circle"/>
     </div>

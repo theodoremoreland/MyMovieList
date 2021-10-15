@@ -1,5 +1,5 @@
 // React
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 // Controllers
 import {
@@ -22,6 +22,8 @@ export default function UserView() {
     const [completed, setCompleted] = useState([]);
     const [dropped, setDropped] = useState([]);
     const [favorites, setFavorites] = useState([]);
+
+    const containerRef = useRef();
 
     const handleTitleChange = (e) => {
         const value = e.target.value;
@@ -55,7 +57,7 @@ export default function UserView() {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to top of page.
+        containerRef.current.scrollTo(0, 0); // Scroll to top of page.
         init();
 
         const {
@@ -75,7 +77,7 @@ export default function UserView() {
     }, []);
 
     return (
-        <div className="userViewContainer">
+        <div className="userViewContainer" ref={containerRef}>
             <Banner
                 title={username}
                 pic={pic}

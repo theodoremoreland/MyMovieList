@@ -25,6 +25,7 @@ export default function MovieListView() {
     const { movies, setMovies } = useContext(MoviesContext);
     const [searchTerm, setSearchTerm] = useState("");
     const inputRef = useRef();
+    const containerRef = useRef();
 
     const updateMovies = async (event) => {
         event.preventDefault();
@@ -37,12 +38,12 @@ export default function MovieListView() {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to top of page.
+        containerRef.current.scrollTo(0, 0); // Scroll to top of page.
         inputRef.current.focus();
     }, []);
 
     return (
-        <div className="movieListContainer">
+        <div className="movieListContainer" ref={containerRef}>
             <div className="lip">
                 <h1>Movies</h1> 
                 <form>

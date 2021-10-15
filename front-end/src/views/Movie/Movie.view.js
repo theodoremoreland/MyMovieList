@@ -1,5 +1,5 @@
 // React
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 // Components
 import Banner from '../../components/Banner/Banner';
@@ -25,6 +25,8 @@ export default function MovieView({ location, navigation }) {
         crew,
         genre } = selectedMovie ? selectedMovie : {};
 
+    const containerRef = useRef();
+
     const handleAddToList = (event, listName) => {
         event.stopPropagation();
 
@@ -33,7 +35,7 @@ export default function MovieView({ location, navigation }) {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to top of page.
+        containerRef.current.scrollTo(0, 0);
         if (location.state) {
             setSelectedMovie(location.state);
         }
@@ -41,7 +43,7 @@ export default function MovieView({ location, navigation }) {
     }, []);
 
     return (
-        <div className="movieViewContainer">
+        <div className="movieViewContainer" ref={containerRef}>
             <Banner
                 title={`${title} (${year})`}
                 pic={poster}
