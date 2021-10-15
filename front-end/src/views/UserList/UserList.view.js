@@ -29,7 +29,7 @@ export default function UserListView() {
     return (
     <div className="userListView">
         <h4>Just you</h4>
-        <Card title={username} pic={pic} />
+        <Card title={username} pic={pic} shape="circle"/>
     </div>
     );
 }

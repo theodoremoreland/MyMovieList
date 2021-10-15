@@ -11,9 +11,19 @@
     border-radius: 4px;
 }
 
-.card:hover {
+.card.circle {
+    height: auto;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card.rect:hover {
     filter: brightness(1.1);
     background-color: rgb(34, 34, 34);
+}
+
+.card.circle:hover {
+    filter: brightness(1.1);
 }
 
 .card h3 {
@@ -21,6 +31,13 @@
     text-align: center;
     margin-top: 5px;
     padding: 5px 7px;
+}
+
+.card.circle > img {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    box-shadow: rgba(0, 0, 0, 0.384) 0px 19px 38px, rgba(0, 0, 0, 0.274) 0px 15px 12px;
 }
 
 .card.rect > img {
