@@ -89,14 +89,20 @@ export default function UserView() {
                     <h3>Favorites</h3>
                     <ul>
                         {
-                            favorites.map(e => 
-                                <Item
-                                    key={`favorite: ${e}`}
-                                    text={e}
-                                    listName="favorites"
-                                    deleteCallback={removeMovieFromList} 
-                                />
-                            )
+                            favorites.length > 0
+                                ?   favorites.map(e => 
+                                        <Item
+                                            key={`favorites: ${e}`}
+                                            text={e}
+                                            listName="favorites"
+                                            deleteCallback={removeMovieFromList}
+                                        />
+                                )
+                                :   <li>
+                                        <p>
+                                            Nothing added to favorites.
+                                        </p>
+                                    </li>
                         }
                     </ul>
                 </li>
@@ -104,14 +110,20 @@ export default function UserView() {
                     <h3>Watchlist</h3>
                     <ul>
                         {
-                            watchlist.map(e => 
-                                <Item
-                                    key={`watchlist: ${e}`}
-                                    text={e}
-                                    listName="watchlist"
-                                    deleteCallback={removeMovieFromList}
-                                />
-                            )
+                            watchlist.length > 0
+                                ?   watchlist.map(e => 
+                                        <Item
+                                            key={`watchlist: ${e}`}
+                                            text={e}
+                                            listName="watchlist"
+                                            deleteCallback={removeMovieFromList}
+                                        />
+                                )
+                                :   <li>
+                                        <p>
+                                            Nothing added to watchlist.
+                                        </p>
+                                    </li>
                         }
                     </ul>
                 </li>
@@ -119,14 +131,20 @@ export default function UserView() {
                     <h3>Completed</h3>
                     <ul>
                         {
-                            completed.map(e =>
-                                <Item
-                                    key={`completed: ${e}`}
-                                    text={e}
-                                    listName="completed"
-                                    deleteCallback={removeMovieFromList} 
-                                />
-                            )
+                            completed.length > 0
+                                ?   completed.map(e => 
+                                        <Item
+                                            key={`completed: ${e}`}
+                                            text={e}
+                                            listName="completed"
+                                            deleteCallback={removeMovieFromList}
+                                        />
+                                    )
+                                :   <li>
+                                        <p>
+                                            Nothing added to completed.
+                                        </p>
+                                    </li>
                         }
                     </ul>
                 </li>
@@ -134,14 +152,20 @@ export default function UserView() {
                     <h3>Dropped</h3>
                     <ul>
                         {
-                            dropped.map(e =>
-                                <Item
-                                    key={`dropped: ${e}`}
-                                    text={e}
-                                    listName="dropped"
-                                    deleteCallback={removeMovieFromList}
-                                />
-                            )
+                            dropped.length > 0
+                                ?   dropped.map(e => 
+                                        <Item
+                                            key={`dropped: ${e}`}
+                                            text={e}
+                                            listName="dropped"
+                                            deleteCallback={removeMovieFromList}
+                                        />
+                                    )
+                                :   <li>
+                                        <p>
+                                            Nothing added to dropped.
+                                        </p>
+                                    </li>
                         }
                     </ul>
                 </li>

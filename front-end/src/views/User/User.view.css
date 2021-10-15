@@ -26,7 +26,7 @@
     font: var(--header);
 }
 
-.userViewContainer .movieItem {
+.userViewContainer .movieItem, .userViewContainer li > p {
     margin: 2px 0px;
     color: aliceblue;
 }
