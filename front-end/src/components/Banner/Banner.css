@@ -3,10 +3,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 350px;
+    height: 500px;
     width: 100%;
     background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #888282 74%);    
+    background-image: linear-gradient(315deg, #000000 0%, #2e2e2e 74%);    
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -18,12 +18,16 @@
 }
 
 .banner img.poster {
-    height: 300px;
-    width: 225px;
+    height: 350px;
+    width: 235px;
 }
 
 .banner img.avatar {
     border-radius: 500px;
+}
+
+.banner h1 {
+    font-size: xx-large;
 }
 
 .banner .inputContainer {
