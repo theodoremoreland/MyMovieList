@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 250px;
-    width: 200px;
+    height: 300px;
+    width: 250px;
     padding: 10px 0px 25px 0px;
     color: var(--quaternary-color);
     background-color: rgba(0, 0, 0, 0.212);
@@ -24,7 +24,7 @@
 }
 
 .card.rect > img {
-    height: 200px;
-    width: 150px;
+    height: 255px;
+    width: 175px;
     box-shadow: rgba(0, 0, 0, 0.384) 0px 19px 38px, rgba(0, 0, 0, 0.274) 0px 15px 12px;
 }
