@@ -55,6 +55,7 @@ export default function UserView() {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top of page.
         init();
 
         const {

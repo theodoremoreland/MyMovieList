@@ -37,6 +37,7 @@ export default function MovieListView() {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top of page.
         inputRef.current.focus();
     }, []);
 

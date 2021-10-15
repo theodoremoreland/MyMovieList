@@ -33,6 +33,7 @@ export default function MovieView({ location }) {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top of page.
         if (location.state) {
             setSelectedMovie(location.state);
         }
