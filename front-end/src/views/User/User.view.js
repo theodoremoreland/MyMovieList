@@ -37,6 +37,7 @@ export default function UserView() {
 
     const update = () => {
         updateProfile({ username, pic, location });
+        alert("Username and location updated.");
     }
 
     const removeMovieFromList = (e, listName, text) => {
