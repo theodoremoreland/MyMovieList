@@ -62,12 +62,17 @@
 }
 
 #wiki {
-    margin: 15px 0px 15px 60px;
+    margin: -15px 0px 15px 60px;
     font: var(--header);
-    color: rgb(70, 119, 255);
+    color: var(--secondary-color);
     text-decoration: none;
+    text-align: center;
 }
 
 #wiki:hover {
     filter: opacity(0.6);
+}
+
+#wiki img {
+    height: 50px;
 }

@@ -62,14 +62,6 @@ export default function MovieView({ location }) {
                     Add to dropped
                 </button>
             </div>
-            <a
-                href={wiki_page}
-                target="_blank"
-                rel="noreferrer"
-                id="wiki"
-            >
-                <p>-- Wiki --</p>
-            </a>
             <ul>
                 <li>
                     <h3>Cast</h3>
@@ -88,6 +80,18 @@ export default function MovieView({ location }) {
                     <p>{genre}</p>
                 </li>
             </ul>
+            <a
+                href={wiki_page}
+                target="_blank"
+                rel="noreferrer"
+                id="wiki"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/220px-Wikipedia-logo-v2.svg.png"
+                    alt="wiki logo"
+                />
+                <h3>Wiki</h3>
+            </a>
         </div>
     );
 }
