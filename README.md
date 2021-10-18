@@ -1,5 +1,9 @@
 # MyMovieList
 
+Browse, search, and add movies to a watch list. Features 34k+ movie titles from 1901 through 2017. 
+
+### Hypothetical
+
 What does your taste in movies say about you? No, this isn't a BuzzFeed article or an online quiz. 
 MyMovieList is a platform for creating your own Movie Profile. Your profile can be used to express your exquisite taste
 and find other people of a similarly refined palate.
@@ -30,7 +34,6 @@ https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
 
 ### Future improvements
 - Add testing suites
-- Make porperly responsivess on small devices
 - Add plots to movie data
 - Update banners so they change color based on poster and profile pic
 - Add database for mock users
