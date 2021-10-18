@@ -1,27 +1,22 @@
 .menu {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
-    min-width: 225px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: black;
+    order: 2;
 }
 
 .menu h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0px 5px 25px;
-    font: var(--header);
-}
-
-.menu h2 > span {
-    margin: 0px 1px;
+    display: none;
 }
 
 .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     margin: 0px 35px;
     width: 100%;
 }
@@ -29,23 +24,79 @@
 .menu li {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px 0px;
+    margin: 10px 0px;
     color: var(--quaternary-color);
-    font: var(--body);
+    font-size: 1.9rem;
     text-decoration: none;
 }
 
-.menu li:hover {
+.menu li:hover, .menu li:hover {
     filter: brightness(1.2);
 }
 
+.menu li:active {
+    scale: 1.2;
+}
+
 .menu li > span {
+    display: none;
     margin: 0px 9px;
 }
 
 .menu .nav-button {
     text-decoration: none;
+}
+
+.menu .nav-button > span {
+    height: 3rem;
+}
+
+/* ------------------- GLOBAL MEDIA QUERIES ------------------- */
+
+@media screen and (min-width: 769px) {
+    .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: initial;
+        min-width: 225px;
+        order: initial;
+    }
+
+    .menu h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px 5px 25px;
+        font: var(--header);
+    }
+
+    .menu h2 > span {
+        margin: 0px 1px;
+    }
+
+    .menu ul {
+        display: initial;
+        margin: 0px 35px;
+        width: 100%;
+    }
+
+    .menu li {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0px;
+        font: var(--body);
+    }
+
+    .menu li > span {
+        display: initial;
+    }
 }
