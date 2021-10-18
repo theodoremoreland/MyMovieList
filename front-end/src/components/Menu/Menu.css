@@ -96,6 +96,10 @@
         font: var(--body);
     }
 
+    .menu li:active {
+        scale: initial;
+    }
+
     .menu li > span {
         display: initial;
     }
