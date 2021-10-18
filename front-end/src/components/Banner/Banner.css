@@ -1,6 +1,6 @@
 .banner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 500px;
@@ -13,7 +13,7 @@
 .banner img {
     height: 250px;
     width: 250px;
-    margin: 0px 15px 0px 35px;
+    margin: 10px 0px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -27,7 +27,8 @@
 }
 
 .banner h1 {
-    font-size: xx-large;
+    padding: 25px;
+    font-size: large;
 }
 
 .banner .inputContainer {
@@ -56,4 +57,29 @@
 
 .banner button:hover, .banner input:hover {
     filter: brightness(1.2);
+}
+
+/* ------------------- GLOBAL MEDIA QUERIES ------------------- */
+
+@media screen and (min-width: 769px) {
+    .banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 500px;
+        width: 100%;
+        background-color: #000000;
+        background-image: linear-gradient(315deg, #000000 0%, #2e2e2e 74%);    
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    .banner h1 {
+        padding: 0;
+        font-size: xx-large;
+    }
+
+    .banner img {
+        margin: 0px 15px 0px 35px;
+    }
 }
