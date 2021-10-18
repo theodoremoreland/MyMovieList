@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .movieViewContainer > ul {
-    margin: 0px 0px 25px 60px;
+    margin: 0px 0px 25px 25px;
 }
 
 .movieViewContainer ul, .movieViewContainer li {
@@ -22,7 +22,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0px 0px 0px 30px;
 }
 
 .movieViewContainer  > .buttonGroup button {
@@ -62,7 +61,7 @@
 }
 
 #wiki {
-    margin: -15px 0px 15px 60px;
+    margin: -15px 0px 15px 0px;
     font: var(--header);
     color: var(--secondary-color);
     text-decoration: none;
@@ -75,4 +74,27 @@
 
 #wiki img {
     height: 50px;
+}
+
+/* ------------------- GLOBAL MEDIA QUERIES ------------------- */
+
+@media screen and (min-width: 769px) {
+    .movieViewContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .movieViewContainer  > .buttonGroup {
+        margin: 0px 0px 0px 30px;
+    }
+    
+    .movieViewContainer > ul {
+        margin: 0px 0px 25px 60px;
+    }
+
+    #wiki {
+        margin: -15px 0px 15px 60px;
+    }
 }
