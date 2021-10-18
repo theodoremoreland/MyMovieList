@@ -1,14 +1,13 @@
 .movieListContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .movieList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 25px;
 }
 
 .movieList .navLink {
@@ -21,25 +20,17 @@
 
 .lip {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 30px 0px 30px 0px;
-}
-
-.lip h1 {
-    margin-left: 45px;
-}
-
-.lip form {
-    margin-right: 10%;
+    margin: 10px 0px;
 }
 
 .lip input {
     height: 30px;
-    width: 300px;
-    margin-right: 15px;
+    width: 175px;
+    margin: 5px 15px 5px 0px;
     font: var(--body);
     border-radius: 30px;
     border-style: none;
@@ -62,4 +53,50 @@
 
 .lip .searchIcon:hover {
     filter: opacity(0.5);
+}
+
+/* ------------------- GLOBAL MEDIA QUERIES ------------------- */
+
+@media screen and (min-width: 360px) {
+    .lip input {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .movieListContainer {
+        align-items: flex-start;
+    }
+    
+    .movieList {
+        margin-left: 25px;
+    }
+
+    .lip {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 30px 0px 30px 0px;
+    }
+    
+    .lip h1 {
+        margin-left: 45px;
+    }
+    
+    .lip form {
+        margin-right: 10%;
+    }
+
+    .lip input {
+        height: 30px;
+        width: 300px;
+        margin-right: 15px;
+        font: var(--body);
+        border-radius: 30px;
+        border-style: none;
+        padding: 3px;
+        text-align: center;
+    }
 }
