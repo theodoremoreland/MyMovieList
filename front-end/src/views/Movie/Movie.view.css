@@ -5,8 +5,17 @@
     align-items: center;
 }
 
+.movieViewContainer .plot {
+    padding: 25px;
+    color: white;
+    font: var(--body);
+    line-height: 1.8888rem;
+    text-align: left;
+    text-justify: inter-word;
+}
+
 .movieViewContainer > ul {
-    margin: 0px 0px 25px 25px;
+    margin: 0px 0px 0px 25px;
 }
 
 .movieViewContainer ul, .movieViewContainer li {
@@ -16,7 +25,7 @@
     align-items: flex-start;
 }
 
-.movieViewContainer  > .buttonGroup {
+.movieViewContainer > .buttonGroup {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -37,12 +46,12 @@
     font: var(--accent);
 }
 
-.movieViewContainer  > .buttonGroup button:hover {
+.movieViewContainer > .buttonGroup button:hover {
     filter: brightness(1.5);
     scale: 1.02;
 }
 
-.movieViewContainer  > .buttonGroup button:active {
+.movieViewContainer > .buttonGroup button:active {
     filter: opacity(0.6);
 }
 
@@ -84,6 +93,10 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+
+    .movieViewContainer .plot {
+        margin: 0px 0px 0px 25px;
     }
 
     .movieViewContainer  > .buttonGroup {

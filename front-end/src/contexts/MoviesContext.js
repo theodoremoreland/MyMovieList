@@ -41,7 +41,7 @@ export default function MoviesProvider({children}) {
                         setMovies(moviesWithPosters);
                         setSelectedMovie(moviesWithPosters[0]);
                     })
-                    .catch(e => console.log(e))
+                    .catch(e => console.error(e))
                 ;
             }
         }

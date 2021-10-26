@@ -23,7 +23,9 @@ export default function MovieView({ location, navigation }) {
         origin,
         wiki_page,
         crew,
-        genre } = selectedMovie ? selectedMovie : {};
+        genre,
+        plot
+     } = selectedMovie ? selectedMovie : {};
 
     const containerRef = useRef();
 
@@ -36,6 +38,7 @@ export default function MovieView({ location, navigation }) {
 
     useEffect(() => {
         containerRef.current.scrollTo(0, 0);
+        
         if (location.state) {
             setSelectedMovie(location.state);
         }
@@ -65,6 +68,9 @@ export default function MovieView({ location, navigation }) {
                     Add to dropped
                 </button>
             </div>
+            <p className="plot">
+                {plot}
+            </p>
             <ul>
                 <li>
                     <h3>Cast</h3>
