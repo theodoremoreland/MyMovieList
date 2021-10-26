@@ -1,0 +1,12 @@
+CREATE TABLE movies (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(111) NOT NULL,
+	year INTEGER NOT NULL,
+	director VARCHAR(171),
+	origin VARCHAR(12) NOT NULL,
+	genre VARCHAR(81),
+	crew VARCHAR(756),
+	wiki_page VARCHAR(124) NOT NULL,
+	plot TEXT
+)
+;

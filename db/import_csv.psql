@@ -1,0 +1,1 @@
+\copy movies(year, title, origin, director, crew, genre, wiki_page, plot) from 'movie_plots.csv' delimiter ',' csv header;
