@@ -34,8 +34,9 @@ def lambda_handler(event, context):
                     origin,
                     genre,
                     crew,
-                    wiki_page
-                FROM no_plots
+                    wiki_page,
+                    plot
+                FROM movies
                 WHERE SIMILARITY(title, '{search}') > 0.25
                 ORDER BY WORD_SIMILARITY(title, '{search}') DESC
                 LIMIT 30
@@ -50,8 +51,9 @@ def lambda_handler(event, context):
                     origin,
                     genre,
                     crew,
-                    wiki_page
-                FROM no_plots
+                    wiki_page,
+                    plot
+                FROM movies
                 WHERE
                     random() < 0.01
                     AND origin = 'American'
@@ -69,6 +71,7 @@ def lambda_handler(event, context):
             "genre": result[4],
             "crew": result[5],
             "wiki_page": result[6],
+            "plot": result[7]
         } for result in results]
     except Exception as e:
         results = f"SQL ERROR: {e}"
