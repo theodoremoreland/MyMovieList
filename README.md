@@ -34,7 +34,6 @@ https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
 
 ### Future improvements
 - Add testing suites
-- Add plots to movie data
 - Update banners so they change color based on poster and profile pic
 - Add database for mock users
 
