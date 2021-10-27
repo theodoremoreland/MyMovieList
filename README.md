@@ -40,6 +40,12 @@ https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list
 
 # Screenshots
 
+# Landing page / Movie List view (mobile)
+<img src="presentation/0.PNG" width="200">
+
+# After clicking on a movie (mobile)
+<img src="presentation/-1.PNG" width="200">
+
 # Landing page / Movie List view
 <img src="presentation/1.PNG" width="700">
 
