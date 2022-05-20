@@ -37,7 +37,7 @@ export default function MovieView({ location, navigation }) {
     }
 
     useEffect(() => {
-        containerRef.current.scrollTo(0, 0);
+        document.querySelector(".content").scrollTo(0, 0);
         
         if (location.state) {
             setSelectedMovie(location.state);
@@ -46,15 +46,16 @@ export default function MovieView({ location, navigation }) {
     }, []);
 
     return (
-        <div className="movieViewContainer" ref={containerRef}>
+        <div className="movieViewContainer">
             <Banner
                 title={`${title} (${year})`}
                 pic={poster}
                 imgType="poster"
                 subtitle={""}
                 isMutable={false}
+                
             />
-            <div className="buttonGroup">
+            <div className="buttonGroup" ref={containerRef}>
                 <button id="favorites" onClick={(event) =>  handleAddToList(event, "favorites")}>
                     Add to favorites
                 </button>
