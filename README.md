@@ -2,7 +2,7 @@
 
 Browse, search, and add movies to a watch list. Features 34k+ movie titles from 1901 through 2017.
 
-*This was a take home project for a job interview. I was not asked to make this application, specifically, but this was my interpretation of the assignment. Granted, I also took some creative liberties to satisfy my personal interests. I wanted to exercise my abilities to create a clean UI, so I challenged myself to create something inspired by Spotify. This application serves no greater purpose beyond the interview, practice, and as a portfolio piece.*
+*This was a take home project for a job interview. I was not asked to make this application, specifically, but this was my interpretation of the assignment. Granted, I also took some creative liberties to satisfy my personal interests. I wanted to exercise my abilities to create a clean UI, so I challenged myself to create something inspired by Spotify. This application serves no greater purpose beyond the interview and practice.*
 
 [Visit the live deployment](https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list)
 
