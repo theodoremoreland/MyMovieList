@@ -17,7 +17,7 @@ Browse, search, and add movies to a watch list. Features 34k+ movie titles from 
  
 ## Overview
 
-As stated above, this application's purpose was essentially to look cool and give me some practice. It does not serve a greater purpose. As for it's functionality, it allows users to search for movie information in a database and manage a watchlist for said information. When you visit the home page, a random selection of movie posters are displayed and the user can either click to read more about the movie or use the search bar at the top of the page to search for other movies. After clicking on a poster of a particular interest, the associated movie can be added to a watchlist.
+As stated above, this application's purpose was essentially to look cool and give me some practice. It does not serve a greater purpose. As for its functionality, it allows users to search for movie information in a database and manage a watchlist for said information. When you visit the home page, a random selection of movie posters are displayed and the user can either click to read more about the movie or use the search bar at the top of the page to search for other movies. After clicking on a poster of a particular interest, the associated movie can be added to a watchlist.
 
 A list of features include:
 - Browse 30k+ movies.
