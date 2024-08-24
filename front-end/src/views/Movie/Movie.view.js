@@ -53,7 +53,6 @@ export default function MovieView({ location, navigation }) {
                 imgType="poster"
                 subtitle={""}
                 isMutable={false}
-                
             />
             <div className="buttonGroup" ref={containerRef}>
                 <button id="favorites" onClick={(event) =>  handleAddToList(event, "favorites")}>
