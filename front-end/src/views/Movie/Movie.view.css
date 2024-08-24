@@ -34,6 +34,7 @@
 }
 
 .movieViewContainer  > .buttonGroup button {
+    cursor: pointer;
     width: min-content;
     color: var(--quaternary-color);
     text-decoration: none;
