@@ -6,8 +6,6 @@ Browse, search, and add movies to a watch list. Features 34k+ movie titles from 
 
 <img src="presentation/1.PNG" width="650">
 
-[Visit the live deployment](https://main.dcbz4xkz1gclh.amplifyapp.com/#/movie-list)
-
 ## Table of contents
 - [Overview](#overview)
 - [Technologies used](#technologies-used)
